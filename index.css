@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  height: 100%;
+}
+
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.photo img {
+  height: 100vh;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.text {
+  max-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo.desktop {
+  margin-bottom: 3%;
+}
+
+.text div {
+  padding: 20px;
+  box-sizing: border-box;
+  width: 400px;
+  color: hsl(0, 36%, 70%);
+}
+
+.text div h1,
+h2 {
+  font-size: 50px;
+  font-weight: 300;
+  letter-spacing: 20px;
+  line-height: 50%;
+}
+
+.text div h2 {
+  font-weight: 600;
+  color: #616161;
+}
+
+.text div p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+form {
+  position: relative;
+}
+
+input[type="email"] {
+  height: 20px;
+  width: 80%;
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 25px;
+  border: 2px solid hsl(0, 36%, 70%);
+}
+
+input:focus {
+    border: 2px solid hsl(0, 36%, 70%);
+}
+
+input[type="email"],
+input[type="email"]::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+.error {
+  display: none;
+  position: absolute;
+  left: 67%;
+  top: 20%;
+}
+
+p.error {
+    left: 5%;
+    top: 38px;
+}
+
+button {
+  padding: 9px;
+  position: absolute;
+  top: 0;
+  width: 110px;
+  border-radius: 40px;
+  left: 75%;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-color: transparent;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 15px 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .logo.desktop {
+    margin-bottom: 20%;
+  }
+  .text div {
+    width: 250px;
+  }
+
+  .text div h1,
+  h2 {
+    font-size: 40px;
+  }
+  input[type="email"] {
+    width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    align-items: flex-start;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .logo.mobile img {
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .text div {
+    padding: 50px;
+    width: 100vw;
+    text-align: center;
+  }
+  .text div h2,
+  .text div h1 {
+    letter-spacing: 10px;
+  }
+  .text div p {
+    margin-bottom: 50px;
+  }
+  p.error {
+    left: 20%;
+    top: 38px;
+}
+  img.mobile {
+    width: 100vw;
+    height: auto;
+  }
+  .attribution {
+    margin-top: 50px;
+  }
+}
